@@ -39,7 +39,7 @@ public class Study1_Controller {
 
 //    <POST>
 
-//    1. Form을 사용 하는 방법
+//    1-1. Form을 사용 하는 방법
 
     @GetMapping("test5_get_post")
     public String test5(){
@@ -57,6 +57,7 @@ public class Study1_Controller {
         System.out.println("test5_1");
     }
 
+    //    1-2. Form을 사용 하는 방법(별도 class 사용)
     @PostMapping("St1-post-form-req2")
     public void test5_2_post(St1_hello hello)
     {
