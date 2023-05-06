@@ -13,7 +13,7 @@ public class HelloController {
     // http는 국제 통신프로토콜이다. https는 s(secure) 보안이 강화된 통신 프로토콜
     // port란 한 ip내에 여러 프로그램을 구분짓는 단위(프로그램을 구분짓는 유일한 구분자) 집주소가 ip, 각 집의 방문이 port
 
-    // data만을 return할 때는 ResponseBody를 사용한다.
+    // data만을 return할 때는 ResponseBody를 사용한다. 화면을 안찾고 바로 데이터 리턴
     @GetMapping("hello")
     @ResponseBody
     public String hello(){
@@ -25,7 +25,7 @@ public class HelloController {
     @GetMapping("hello-thymeleaf")
     public String hello2(Model model){
         model.addAttribute("getdata","hello2 world");
-        return "hello";
+        return "hello";  // 템플에 파일 있는지 찾음
     }
 
 
