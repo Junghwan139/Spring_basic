@@ -68,7 +68,7 @@ public class HelloController {
 
     }
 
-    // 테스르 할때에, localhost:8080/hello-parameter?test=hello
+    // 테스트 할때에, localhost:8080/hello-parameter?test=hello
     @GetMapping("hello-parameter")
     @ResponseBody
     public String helloParameter(@RequestParam(value = "test")String mytest){
