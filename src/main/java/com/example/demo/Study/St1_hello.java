@@ -1,4 +1,4 @@
-package com.example.demo.bm;
+package com.example.demo.Study;
 
 public class St1_hello {
 
