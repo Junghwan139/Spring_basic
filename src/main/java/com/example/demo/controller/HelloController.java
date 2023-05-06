@@ -14,12 +14,17 @@ public class HelloController {
     // port란 한 ip내에 여러 프로그램을 구분짓는 단위(프로그램을 구분짓는 유일한 구분자) 집주소가 ip, 각 집의 방문이 port
 
     // data만을 return할 때는 ResponseBody를 사용한다. 화면을 안찾고 바로 데이터 리턴
+
+    //클라이언트사이드렌더링(CSR)
+    // data만을 return할 때는 ResponseBody를 사용한다.
     @GetMapping("hello")
     @ResponseBody
     public String hello(){
         return "hello world";
     }
 
+
+    //서버사이드렌더링(SSR)
     // jsp / thymeleaf같은 템플릿엔진을 사용하여 화면을 return할떄에는 responsebody를 사용하면 안된다.
     // 그리고 Model이라는 객체에 data를 담아 return xxx를 하여 xxxx.html파일로 데이터를 보낸다.
     @GetMapping("hello-thymeleaf")
@@ -27,6 +32,5 @@ public class HelloController {
         model.addAttribute("getdata","hello2 world");
         return "hello";  // 템플에 파일 있는지 찾음
     }
-
 
 }
