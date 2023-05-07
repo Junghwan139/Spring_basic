@@ -46,7 +46,7 @@ public class HelloController {
         return "ok";
     }
     
-    @GetMapping("hello-get-form-req")
+    @GetMapping("hello-post-form-req")
     public String helloGerFormReq(){
         return "hello-post-form-req";
     }
