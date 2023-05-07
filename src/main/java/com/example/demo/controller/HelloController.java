@@ -68,6 +68,7 @@ public class HelloController {
 
     }
 
+
     // 테스트 할때에, localhost:8080/hello-parameter?test=hello
     @GetMapping("hello-parameter")
     @ResponseBody
@@ -75,6 +76,8 @@ public class HelloController {
         System.out.println("클라이언트가 보내온 parameter는?"+mytest);
         return "ok";
     }
+
+
 
 
 
@@ -105,6 +108,26 @@ public class HelloController {
 
         return "ok";
     }
+
+//    -----------------------------------------------------------------------------------------------------------
+
+    // ResponseBody 어노테이션이 붙어 있고, return타입이 객체이면 spring이 json형태로 변환해준다.
+    @PostMapping("hello-json-response")
+    @ResponseBody
+    public GoodBye helloJsonResponse(@RequestBody Hello hello){
+
+        System.out.println("이름 : "+hello.getName());
+        System.out.println("이메일 : "+hello.getEmail());
+        System.out.println("비밀번호 : "+hello.getPassword());
+        GoodBye goodbye1 = new GoodBye();
+        goodbye1.setName(hello.getName());
+        goodbye1.setEmail(hello.getEmail());
+        goodbye1.setComments("thankyou");
+        return goodbye1;   // @ResponseBody가 있으면 리턴타입 GoodBye 클래스를 json으로 변환
+    }
+
+
+
 
 
 
