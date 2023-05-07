@@ -1,5 +1,7 @@
 package com.example.demo.Study;
 
+import com.example.demo.controller.GoodBye;
+import com.example.demo.controller.Hello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -81,6 +83,21 @@ public class Study1_Controller {
     public void test6_js(@RequestBody St1_hello hello){
         System.out.println("이름 : "+hello.getName()+"이메일 : "+hello.getEmail()+"password"+hello.getPassword());
     }
+
+//    3. Post에서 Jason으로 반환하는 방법
+    @PostMapping("test7_json_return")
+    @ResponseBody
+    public GoodBye test7(@RequestBody Hello hello1){
+
+        GoodBye bye1 = new GoodBye();
+        bye1.setName(hello1.getName());
+        bye1.setEmail(hello1.getEmail());
+        bye1.setComments("test7");
+        System.out.println("test7");
+        return bye1;
+
+    }
+
 
 
 
