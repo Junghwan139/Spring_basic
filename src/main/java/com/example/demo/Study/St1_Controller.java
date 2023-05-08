@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class Study1_Controller {
+public class St1_Controller {
 
 //    <GET>
 
@@ -29,14 +29,16 @@ public class Study1_Controller {
     @GetMapping("test3_th")
     public String test3_thymleaf (Model model){
         model.addAttribute("getdata","test3_thymeleaf");
-        return "hello-th";
+        return "St1-th";
     }
 
     //4. Get에 Parameter 처리
     @GetMapping("test4_pa")
     @ResponseBody
-    public void test4_pa(@RequestParam(value = "name")String test4_va){
+    public String test4_pa(@RequestParam(value = "name")String test4_va)
+    {
         System.out.println("당신의 이름은 : "+test4_va);
+        return "ok";
     }
 
 //    <POST>
@@ -70,8 +72,6 @@ public class Study1_Controller {
     }
 
 
-
-
 //    2. jason을 사용 하는 방법
     @GetMapping("test6_js")
     public String test6(){
@@ -97,8 +97,6 @@ public class Study1_Controller {
         return bye1;
 
     }
-
-
 
 
 

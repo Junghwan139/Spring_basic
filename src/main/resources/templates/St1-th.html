@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th ="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Get Hello</button>
+<p th:text="${getdata}"></p>
+
+
+<div th:with ="v1=${val_1}, v2=${val_2}">
+    <h1 th:text="${v1}"></h1>
+    <h1 th:text="${v2}"></h1>
+</div>
+
+<!-- 스크립트 타임리프 사용시 th:inline="javascript"명시 -->
+
+<script th:inline="javascript">
+
+    document.write([[${val_1}]]);
+
+</script>
+
+</body>
+</html>
