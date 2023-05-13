@@ -18,8 +18,7 @@ public class HelloController {
     // 최근에 더 많이 사용하는 방법 (현대적인 방식)
     @GetMapping("hello")
     @ResponseBody
-    public String hello(){
-        return "hello world";
+    public String hello() {return "hello world";
     }
 
     // jsp / thymeleaf같은 템플릿엔진을 사용하여 화면을 return할떄에는 responsebody를 사용하면 안된다.
