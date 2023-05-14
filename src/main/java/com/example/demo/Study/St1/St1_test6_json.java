@@ -1,4 +1,4 @@
-package com.example.demo.Study;
+package com.example.demo.Study.St1;
 
 import com.example.demo.controller.GoodBye;
 import com.example.demo.controller.Hello;

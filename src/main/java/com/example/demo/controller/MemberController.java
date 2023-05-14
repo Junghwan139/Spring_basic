@@ -137,7 +137,7 @@ public class MemberController {
         Member member = memeberService.findid(id);
         model.addAttribute("member",member);
 
-        return "member/memeber-detail";
+        return "member/member-detail";
 
     }
 
