@@ -65,7 +65,7 @@ public class MemberController {
         memeberService.create(member1);
 
         /*
-        // jason으로 받는 방법
+        // json으로 받는 방법
         public String memberCreate(@Requestbody Member member) {
 
             // Memeber 객체를 만들어서 MemberService 매개변수로 전달

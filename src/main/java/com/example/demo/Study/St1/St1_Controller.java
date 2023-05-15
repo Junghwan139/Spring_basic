@@ -72,7 +72,7 @@ public class St1_Controller {
     }
 
 
-//    2. jason을 사용 하는 방법
+//    2. json을 사용 하는 방법
     @GetMapping("test6_js")
     public String test6(){
         return "St1-post-json-req";
@@ -84,7 +84,7 @@ public class St1_Controller {
         System.out.println("이름 : "+hello.getName()+"이메일 : "+hello.getEmail()+"password"+hello.getPassword());
     }
 
-//    3. Post에서 Jason으로 반환하는 방법
+//    3. Post에서 Json으로 반환하는 방법
     @PostMapping("test7_json_return")
     @ResponseBody
     public GoodBye test7(@RequestBody Hello hello1){
