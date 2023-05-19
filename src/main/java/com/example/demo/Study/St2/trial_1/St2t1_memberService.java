@@ -15,12 +15,15 @@ public class St2t1_memberService {
         s1t1memRepo.save(member);
     }
 
-    public List<St2t1_member> find(St2t1_member member){
+    public List<St2t1_member> find(){
        List<St2t1_member> s2t1member = s1t1memRepo.findAll();
        return s2t1member;
     }
 
-
+    public St2t1_member finda(Long id){
+        St2t1_member stmember = s1t1memRepo.findById(id).orElse(null);
+        return stmember;
+    }
 
 
 

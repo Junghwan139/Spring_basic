@@ -5,7 +5,7 @@
     <title>Member Registration</title>
 </head>
 <body>
-<h1>Member List</h1>
+<h1>Member Detail</h1>
 
 <table>
 
@@ -14,20 +14,16 @@
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
+        <th>Password</th>
     </tr>
 
     </thead>
 
     <tbody>
-    <tr th:each ="member : ${memberList}">
-
-        <td th:text ="${member.id}"></td>
-        <td th:text ="${member.name}"></td>
-        <td th:text ="${member.email}"></td>
-        <td>
-            <a th:href="@{/s2t1_findOne(id=${member.id})}">View</a>
-
-        </td>
+    <td th:text ="${member.id}"></td>
+    <td th:text ="${member.name}"></td>
+    <td th:text ="${member.email}"></td>
+    <td th:text ="${member.password}"></td>
     </tr>
 
     </tbody>

@@ -57,7 +57,7 @@ public class St2_memberController {
     // DB등록을 위한 화면 요청
     @GetMapping("register")
     public String st2test_html(){
-        return "study/St2/St2_member-register";
+        return "study/St2/main/St2_member-register";
     }
 
     // DB등록을 위한 화면 요청 → form타입으로 저장
@@ -74,7 +74,7 @@ public class St2_memberController {
     public String st2test_th(Model model){
         List<St2_member> members = st2MemberService.findtest();
         model.addAttribute("memberList",members);
-        return "study/St2/St2_member-list";
+        return "study/St2/main/St2_member-list";
     }
 
     //thymleaf로 반환 한 데이터 중 id값에 맞는 데이터만 detail 보기
@@ -82,7 +82,7 @@ public class St2_memberController {
     public String st2test_th2(@RequestParam (value = "id")Long myid, Model model){
         St2_member member = st2MemberService.findby(myid);
         model.addAttribute("member",member);
-        return "study/St2/St2_member-detail";
+        return "study/St2/main/St2_member-detail";
     }
 
 

@@ -19,8 +19,6 @@ public class MemberController {
     @Autowired
     private MemberService memeberService;
 
-
-
     @GetMapping("members/new")
     public String memberCreateFrom() {
 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Member Registration</title>
+
+  <style>
+    #myTable {
+      display: none; /* 표를 초기에 숨깁니다. */
+    }
+  </style>
+
+  <script>
+    function showTable() {
+      var table = document.getElementById("myTable");
+      if (table.style.display === "none") {
+        table.style.display = "table"; /* 표를 보이도록 설정합니다. */
+      } else {
+        table.style.display = "none"; /* 표를 숨깁니다. */
+      }
+    }
+  </script>
+
+
+</head>
+<body>
+<h1>Member Registration</h1>
+<form method="post" action="/St2t2_find">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+
+  <button type="submit" onclick="showTable()">Register</button>
+
+  <table id="myTable">
+
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr th:each ="member : ${memberList}">
+
+      <td th:text ="${member.id}"></td>
+      <td th:text ="${member.name}"></td>
+      <td th:text ="${member.email}"></td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+
+</form>
+</body>
+</html>
