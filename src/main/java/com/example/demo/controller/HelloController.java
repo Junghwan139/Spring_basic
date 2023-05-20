@@ -21,6 +21,8 @@ public class HelloController {
     public String hello() {return "hello world";
     }
 
+
+
     // jsp / thymeleaf같은 템플릿엔진을 사용하여 화면을 return할떄에는 responsebody를 사용하면 안된다.
     // 그리고 Model이라는 객체에 data를 담아 return xxx를 하여 xxxx.html파일로 데이터를 보낸다.
     // 화면을 렌더링 하는 방식
