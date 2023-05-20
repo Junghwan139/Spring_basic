@@ -21,14 +21,6 @@ public class St2t4_Controller {
         return "ok";
     }
 
-    @GetMapping("st4_th")
-    public String st4_th(@RequestParam(value = "id") String myid, Model model){
-
-        return "St2t1_member-detail";
-
-    }
-
-
 
 
 }
