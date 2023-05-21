@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @Controller
@@ -23,7 +24,7 @@ public class MemberJsonController {
     @ResponseBody
     public String memberCreateForm(@RequestParam(value="name") String myname,
                                    @RequestParam(value="email") String myemail,
-                                   @RequestParam(value="password") String mypassword) {
+                                   @RequestParam(value="password") String mypassword) throws SQLException {
 
         Member member1 = new Member();
         member1.setName(myname);
@@ -38,7 +39,7 @@ public class MemberJsonController {
 
     @GetMapping("json/members")
     @ResponseBody
-    public List<Member> memberFindAll() {
+    public List<Member> memberFindAll() throws SQLException {
 
         List<Member> members = memeberService.findAll();
         return members;
@@ -47,7 +48,7 @@ public class MemberJsonController {
 
     @GetMapping("json/member")
     @ResponseBody
-    public Member memberFindid(@RequestParam(value = "id")Long id) {
+    public Member memberFindid(@RequestParam(value = "id")Long id) throws SQLException {
 
         Member member = memeberService.findid(id);
         return member;

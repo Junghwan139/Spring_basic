@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 
+//  jdbc repository를 활용하기 우한 라이브러리 추가
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 //	jsp를 위한 라이브러리 추가
