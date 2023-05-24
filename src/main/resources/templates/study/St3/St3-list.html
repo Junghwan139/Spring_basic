@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Member Registration</title>
+</head>
+<body>
+<h1>St3_Member List</h1>
+
+<table>
+
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <tr th:each ="member : ${memberList}">
+
+    <td th:text ="${member.id}"></td>
+    <td th:text ="${member.name}"></td>
+    <td th:text ="${member.email}"></td>
+    <td>
+      <!--GetMapping 요청 /member-->
+      <a th:href="@{/St3_one(id=${member.id})}">View</a>
+
+
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>
+
+</body>
+</html>

@@ -16,16 +16,17 @@ public class MemberService {
 
 // service에서 repository를 주입 받기 위해서, Autowired를 사용(다른 방법도 있음)
 // springdatajpa를 사용한 repository
-
 @Autowired
 private MemberRepository memeberRepository;
-// mybatisfmf 사용한 repository
+
+
+// mybatis를 사용한 repository
 // jpa와 함께 사용할 수도 있다. 복잡한 service logic또는 heavy한 쿼리가 있을경우
 // jpa로는 한계가 있으므로, 현업에선느 mybatis와 jpa를 섞어 사용하기도 한다.
-
 @Autowired
 private MemberMybatisRepository memberMybatisRepository;
 
+// JDBC 레파지토리
 @Autowired
 private MemberJdbcRepository memberJdbcRepository;
 
