@@ -1,11 +1,13 @@
 package com.example.demo.Study.St4;
 
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@NoArgsConstructor
 public class St4_member {
 
 
