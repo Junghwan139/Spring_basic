@@ -44,6 +44,7 @@ public class MemberJsonController {
         List<Member> members = memeberService.findAll();
         return members;
 
+
     }
 
     @GetMapping("json/member")
